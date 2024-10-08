@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Instruments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="download.jpeg">
+</head>
+<body>
+    <h1>Melomony🚀</h1>
+    
+    <div class="mydiv">
+        <button id="signInBtn">Sign in</button>
+        <button id="loginBtn">Login</button>
+        <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+        <button id="purchasesBtn">Purchases</button>
+        <button id="aboutBtn">About Us</button>
+        <button id="productsBtn">Products</button>
+    </div> <br><br>
+
+    <!-- Sign In / Login Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="authTitle">Sign In</h2>
+            <form id="authForm">
+                <input type="text" id="name" placeholder="Enter your name" required><br><br>
+                <input type="email" id="email" placeholder="Enter your email" required><br><br>
+                <input type="password" id="password" placeholder="Enter your password" required><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="aboutSection" class="about-section" style="display: none;">
+        <h2>About Melomony</h2>
+        <p>Welcome to Melomony! We are a passionate team of musicians and instrument enthusiasts, providing you with high-quality musical instruments at affordable prices. Our mission is to make music accessible to everyone, and we hope you find the perfect instrument for your musical journey!</p>
+    </div>
+
+    <!-- Products Section -->
+    <div id="productsSection" class="container" style="display: none;">
+        <div class="menu-item" data-name="Foule Guitar" data-price="12.96">
+            <h3> Foule Guitar <span class="price">$12.96 </span> </h3>
+            <img src="guitar.jpeg" alt="Choco Truffle" class="round-image">
+            <p>Do check the color!</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-name="Keynote Piano" data-price="34.56">
+            <h3> Keynote Piano <span class="price">$34.56</span></h3>
+            <img src="piano.jpeg" alt="Stuffed Mousse" class="round-image">
+            <p>Shipping charges would be added!</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-name="Oppo OnAir Buds" data-price="6.50">
+            <h3> Oppo OnAir Buds <span class="price">$6.50</span></h3>
+            <img src="enco.jpeg" alt="Chocolate SpinCake" class="round-image">
+            <p>Free delivery!</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-name="Aesthetic Tambura" data-price="60.23">
+            <h3> Aesthetic Tambura <span class="price">$60.23</span></h3>
+            <img src="tambura.jpeg" alt="Tiramisu" class="round-image">
+            <p>Additional charges for delivery</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-name="Placed Harmonium" data-price="34.18">
+            <h3> Placed Harmonium <span class="price">$34.18</span></h3>
+            <img src="harm.jpeg" alt="Hash Brownie" class="round-image">
+            <p>Free delivery</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+
+        <div class="menu-item" data-name="Bamboo Flute" data-price="21.96">
+            <h3> Bamboo Flute <span class="price">$21.96</span></h3>
+            <img src="flute.jpeg" alt="Dragon Cheese Puff" class="round-image">
+            <p>Delivers Tomorrow</p>
+            <button class="addToCartBtn">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cartSection" class="container" style="display: none;">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <p id="emptyCartMsg">Your cart is empty.</p>
+    </div>
+
+    <!-- Purchases Section -->
+    <div id="purchasesSection" class="container" style="display: none;">
+        <h2>Payment Options</h2>
+        <form>
+            <label for="card">Credit/Debit Card</label><br>
+            <input type="text" id="card" placeholder="Enter your card details"><br><br>
+            <label for="upi">UPI</label><br>
+            <input type="text" id="upi" placeholder="Enter your UPI ID"><br><br>
+            <label for="paypal">PayPal</label><br>
+            <input type="text" id="paypal" placeholder="Enter your PayPal ID"><br><br>
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
